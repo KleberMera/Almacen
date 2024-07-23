@@ -1,0 +1,51 @@
+ion-searchbar {
+  --background: #3880ff;
+
+  --color: #000000;
+  --icon-color: #000000;
+  --placeholder-color: #ffffff;
+}
+
+img.img {
+  --background: var(--ion-color-primary);
+}
+
+ion-list {
+  --background: transparent;
+}
+
+ion-item {
+  --background: #333333; /* Fondo de los ítems */
+  color: #ffffff; /* Color blanco para el texto */
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.product-item ion-thumbnail {
+  --border-radius: 8px; /* Bordes redondeados para las imágenes */
+}
+
+.product-item h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.product-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #000000; /* Color gris para los detalles */
+}
+
+ion-item-options {
+  background: var(--ion-color-primary);
+}
+
+ion-item-option[color="warning"] {
+  --background: #ffc107; /* Color amarillo para editar */
+}
+
+ion-item-option[color="danger"] {
+  --background: #e74c3c; /* Color rojo para eliminar */
+}

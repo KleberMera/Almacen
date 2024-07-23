@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>{{ id == 0 ? 'Nuevo Usuario' : 'Editar Usuario' }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/principal"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="fun_grabar()">
+        <ion-icon name="save" slot="start"></ion-icon>
+        
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios">
+  <ion-grid fixed>
+    <ion-row justify-content-center>
+      <ion-col size="12" size-md="8" size-lg="6">
+        <ion-item color="primary" mode="ios">
+          <ion-label><h1>Activo</h1></ion-label>
+          <ion-toggle
+            color="success"
+            [(ngModel)]="activo"
+            slot="end"
+          ></ion-toggle>
+        </ion-item>
+
+        <ion-item lines="inset">
+          <ion-label position="stacked" color="tertiary">Usuario</ion-label>
+          <ion-input
+            type="text"
+            [(ngModel)]="usuario"
+            placeholder="Ingrese el usuario"
+            clear-input
+            color="tertiary"
+          ></ion-input>
+        </ion-item>
+        <ion-item lines="inset">
+          <ion-label position="stacked" color="tertiary">Clave</ion-label>
+          <ion-input
+            type="password"
+            [(ngModel)]="clave"
+            clear-input
+            placeholder="Ingrese la clave"
+          ></ion-input>
+        </ion-item>
+        <ion-item lines="inset">
+          <ion-label position="stacked" color="tertiary">Nombre</ion-label>
+          <ion-input type="text" [(ngModel)]="nombre" clear-input
+          placeholder="Ingrese el nombre"
+          ></ion-input>
+        </ion-item>
+        <ion-item lines="inset">
+          <ion-label position="stacked" color="tertiary">Teléfono</ion-label>
+          <ion-input type="tel" [(ngModel)]="telefono" clear-input
+          placeholder="Ingrese el número de teléfono"
+          ></ion-input>
+        </ion-item>
+        <ion-item lines="inset">
+          <ion-label position="stacked" color="tertiary">Correo</ion-label>
+          <ion-input type="email" [(ngModel)]="correo" clear-input
+          placeholder="Ingrese el correo"
+          ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

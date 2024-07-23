@@ -1,0 +1,36 @@
+ion-item {
+  --background: #333333; /* Fondo de los ítems */
+  color: #ffffff; /* Color blanco para el texto */
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.user-avatar {
+  font-size: 3rem;
+ 
+}
+
+ion-label h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+ion-label p {
+  margin: 0;
+  color: #cccccc;
+}
+ion-item-options {
+  background: var(--ion-color-primary);
+}
+
+
+
+ion-item-option[color="warning"] {
+  --background: #ffc107; /* Color amarillo para editar */
+}
+
+ion-item-option[color="danger"] {
+  --background: #e74c3c; /* Color rojo para eliminar */
+}
+

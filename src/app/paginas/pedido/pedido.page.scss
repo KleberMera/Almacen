@@ -1,0 +1,41 @@
+ion-card {
+  color: #ffffff; /* Color del texto */
+  margin: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+ion-card-title {
+  color: #4a90e2; /* Color azul terciario */
+}
+
+ion-card-subtitle {
+ 
+  font-size: 1.5rem;
+}
+
+ion-select{
+    font-size: 1.5rem;
+}
+.product-item ion-thumbnail {
+  --border-radius: 8px; /* Bordes redondeados para las imágenes */
+}
+
+ion-button{
+    height:  100%;
+    width: 100%;
+}
+ 
+
+
+.product-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--ion-color-tertiary);
+}
+
+.product-price,
+.product-stock {
+  font-size: 1em;
+  color: var(--ion-color-medium);
+}

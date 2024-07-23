@@ -1,0 +1,53 @@
+ion-header {
+    --background: #4a90e2; /* Color azul terciario */
+  }
+
+  ion-toolbar {
+    --background: #4a90e2;
+    --color: #ffffff; /* Color blanco para el texto */
+  }
+
+  ion-card {
+    --background: #1e1e1e; /* Fondo oscuro */
+    color: #ffffff; /* Color blanco para el texto */
+    margin: 16px;
+    border-radius: 8px;
+  }
+
+  ion-item {
+    --background: #333333; /* Fondo de los ítems */
+    color: #ffffff; /* Color blanco para el texto */
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  ion-avatar {
+    --background: #4a90e2; /* Color azul terciario */
+  }
+
+  ion-label h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  ion-label p {
+    margin: 0;
+    color: #cccccc;
+  }
+
+  ion-item-options {
+    background: #1e1e1e;
+  }
+
+  ion-item-option {
+    --color: #ffffff;
+  }
+
+  ion-item-option[color="secondary"] {
+    --background: #4a90e2; /* Color azul terciario */
+  }
+
+  ion-item-option[color="danger"] {
+    --background: #e74c3c; /* Color rojo para eliminar */
+  }

@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>{{ id == 0 ? 'Nuevo Producto' : 'Editar Producto' }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/principal"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="fun_grabar()">
+        <ion-icon name="save"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row justify-content-center>
+      <ion-col size="12" size-md="8" size-lg="6">
+        <ion-item color="primary" mode="ios">
+          <ion-label><h1>Activo</h1></ion-label>
+          <ion-toggle
+            color="success"
+            [(ngModel)]="activo"
+            slot="end"
+          ></ion-toggle>
+        </ion-item>
+
+        <ion-card mode="ios">
+          <div
+            class="image-container"
+            style="text-align: center; margin-top: 20px"
+            mode="ios"
+          >
+            <img
+              class="img"
+              [src]="imagen || 'assets/imagenes/image-outline.svg'"
+              alt="producto"
+              style="
+                max-width: 150px;
+                max-height: 150px;
+                margin-bottom: 20px;
+                border-radius: 8px;
+              "
+            />
+            <ion-toolbar mode="ios">
+              <ion-grid fixed>
+                <ion-row>
+                  <ion-col size="6">
+                    <ion-button
+                      color="primary"
+                      (click)="cambiarImagen()"
+                      expand="block"
+                    >
+                      <ion-icon name="image"></ion-icon>
+                      Cambiar
+                    </ion-button>
+                  </ion-col>
+                  <ion-col size="6">
+                    <ion-button
+                      color="danger"
+                      (click)="eliminarImagen()"
+                      expand="block"
+                    >
+                      <ion-icon name="close"></ion-icon>
+                      Eliminar
+                    </ion-button>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-toolbar>
+          </div>
+        </ion-card>
+
+        <ion-item lines="inset" mode="ios">
+          <ion-label position="stacked" color="tertiary">Nombre</ion-label>
+          <ion-input type="text" [(ngModel)]="nombre" clear-input> </ion-input>
+        </ion-item>
+
+        <ion-item lines="inset" mode="ios">
+          <ion-label position="stacked" color="tertiary">Código</ion-label>
+          <ion-input type="text" [(ngModel)]="codigo" clear-input> </ion-input>
+        </ion-item>
+        <ion-item lines="inset" mode="ios">
+          <ion-label position="stacked" color="tertiary">Stock</ion-label>
+          <ion-input type="number" [(ngModel)]="stock" clear-input> </ion-input>
+        </ion-item>
+        <ion-item lines="inset" mode="ios">
+          <ion-label position="stacked" color="tertiary">Precio</ion-label>
+          <ion-input type="number" [(ngModel)]="precio" clear-input>
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

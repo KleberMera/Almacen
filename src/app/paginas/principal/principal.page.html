@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title mode="ios">Almacén</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="confirmarSalir()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios">
+  <ion-card class="welcome-card">
+    <ion-card-content>
+      <ion-icon name="happy-outline" class="welcome-icon"></ion-icon>
+      <ion-card-title>Bienvenido</ion-card-title>
+      <ion-card-subtitle class="welcome-username">{{usuario}}</ion-card-subtitle>
+    </ion-card-content>
+  </ion-card>
+
+  <!--- Botones -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card button class="feature-card" (click)="servG.irA('/usuarios')">
+          <ion-card-content class="ion-text-center">
+            <ion-icon name="person-outline" class="card-icon"></ion-icon>
+            <ion-card-title>Usuarios</ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card button class="feature-card" (click)="servG.irA('/productos')">
+          <ion-card-content class="ion-text-center">
+            <ion-icon name="calculator-outline" class="card-icon"></ion-icon>
+            <ion-card-title>Productos</ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card button class="feature-card" (click)="servG.irA('/clientes')">
+          <ion-card-content class="ion-text-center">
+            <ion-icon name="people-outline" class="card-icon"></ion-icon>
+            <ion-card-title>Clientes</ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card button class="feature-card" (click)="servG.irA('/pedidos')">
+          <ion-card-content class="ion-text-center">
+            <ion-icon name="cart-outline" class="card-icon"></ion-icon>
+            <ion-card-title>Pedidos</ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card button class="feature-card" (click)="servG.irA('/detalles')">
+          <ion-card-content class="ion-text-center">
+            <ion-icon name="list-outline" class="card-icon"></ion-icon>
+            <ion-card-title>Detalles</ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar mode="ios" color="tertiary">
+    <ion-title>Upse 2024</ion-title>
+  </ion-toolbar>
+</ion-footer>

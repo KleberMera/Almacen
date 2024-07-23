@@ -1,0 +1,38 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-title mode="ios">Reestablecer Conraseña</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="principal"></ion-back-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding d-flex-center">
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="usuario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Nueva Clave</ion-label>
+        <ion-input type="password" [(ngModel)]="clave"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <div class="ion-text-center ion-margin-top">
+    <ion-button expand="block" (click)="reestablecer()">
+      <ion-icon slot="start" name="log-in"></ion-icon>
+      Reestablecer
+    </ion-button>
+  </div>
+ 
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar color="primary" mode="ios">
+    <ion-title>2024</ion-title>
+  </ion-toolbar>
+</ion-footer>

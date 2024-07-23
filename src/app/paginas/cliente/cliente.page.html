@@ -1,0 +1,76 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-title>{{ id == 0 ? 'Nuevo Cliente' : 'Editar Cliente' }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="fun_grabar()">
+        <ion-icon slot="start" name="save"></ion-icon>
+        Guardar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row justify-content-center>
+      <ion-col size="12" size-md="8" size-lg="6">
+        
+      <ion-item lines="inset" mode="ios">
+        <ion-label position="stacked" color="tertiary">Identificación</ion-label>
+        <ion-input type="text" [(ngModel)]="identificacion" clear-input 
+        placeholder="Ingrese su identificación"
+        > </ion-input>
+      </ion-item>
+      <ion-item lines="inset" mode="ios">
+        <ion-label position="stacked" color="tertiary">Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="nombre" clear-input
+        placeholder="Ingrese su nombre"
+        ></ion-input>
+      </ion-item>
+      <ion-item lines="inset" mode="ios">
+        <ion-label position="stacked" color="tertiary">Telefono</ion-label>
+        <ion-input type="text" [(ngModel)]="telefono"
+        clear-input
+        placeholder="Ingrese su telefono"
+        ></ion-input>
+      </ion-item>
+      <ion-item lines="inset" mode="ios">
+        <ion-label position="stacked" color="tertiary">Correo</ion-label>
+        <ion-input type="text" [(ngModel)]="correo"
+        clear-input
+        placeholder="Ingrese su correo"
+        ></ion-input>
+      </ion-item>
+      <ion-item lines="inset" mode="ios">
+        <ion-label position="stacked" color="tertiary">Dirección</ion-label>
+        <ion-input type="text" [(ngModel)]="direccion"
+        clear-input
+        placeholder="Ingrese su dirección"
+        ></ion-input>
+      </ion-item>
+      <ion-item lines="inset" mode="ios">
+        <ion-label position="stacked" color="tertiary">País</ion-label>
+        <ion-input type="text" [(ngModel)]="pais"
+        clear-input
+        placeholder="Ingrese su país"
+        ></ion-input>
+      </ion-item>
+      <ion-item lines="inset" mode="ios">
+        <ion-label position="stacked" color="tertiary">Ciudad</ion-label>
+        <ion-input type="text" [(ngModel)]="ciudad"
+        clear-input
+        placeholder="Ingrese su ciudad"
+        ></ion-input>
+      </ion-item>
+
+      </ion-col>
+     
+    </ion-row>
+  </ion-grid>
+  
+    
+ 
+</ion-content>

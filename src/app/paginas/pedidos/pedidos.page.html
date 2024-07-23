@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Productos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="principal"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="servG.irA('/pedido/'+0)">
+        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="content-bg">
+  <ion-list lines="none" class="product-list">
+    <ion-item-sliding *ngFor="let producto of filteredProductos" #ionItemSliding>
+      <ion-item class="product-item">
+        <ion-thumbnail slot="start">
+          <img class="product-img" [src]="getImageUrl(producto)" alt="producto" />
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{producto.nombre}}</h2>
+          <p>Precio: {{producto.precio | currency:'USD'}}</p>
+          <p>Stock: {{producto.stock}}</p>
+        </ion-label>
+        <ion-button 
+          slot="end" 
+          (click)="agregarAlCarrito(producto)" 
+          [disabled]="producto.agregado || !productoValido(producto)"
+          [color]="getButtonColor(producto)"
+          class="product-button">
+          {{ getButtonText(producto) }}
+          <ion-icon slot="icon-only" name="cart"></ion-icon>
+        </ion-button>
+      </ion-item>
+      <ion-item-options side="end" class="item-options">
+        <ion-item-option color="secondary" (click)="fun_editarProducto(producto, ionItemSliding)">
+          <ion-icon slot="icon-only" name="create"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="danger" (click)="fun_eliminarProducto(producto, ionItemSliding)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

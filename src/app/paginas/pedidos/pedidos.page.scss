@@ -1,0 +1,82 @@
+.content-bg {
+    background-color: #f0f4f8;
+  }
+  
+  .product-list {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .product-item {
+    --background: #b8d4f8;
+    --ion-item-background: #ffffff;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-img {
+    border-radius: 50%;
+    border: 2px solid #000000;
+  }
+  
+  .product-button {
+    --border-radius: 50px;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  
+  ion-button[disabled] {
+    --background: #d1d1d1;
+    --color: #ffffff;
+  }
+  
+  ion-button[color="danger"] {
+    --background: #ff4d4d;
+    --color: #ffffff;
+  }
+  
+  ion-button[color="warning"] {
+    --background: #ffaa00;
+    --color: #ffffff;
+  }
+  
+  ion-button[color="primary"] {
+    --background: #4d79ff;
+    --color: #ffffff;
+  }
+  
+  .product-item h2 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .product-item p {
+    color: #666;
+  }
+  
+  .item-options {
+    --background: #e8f0fe;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .item-options ion-item-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0px;
+    height: 100%;
+    border-left: 1px solid #d1d1d1;
+  }
+  
+  ion-item-option[color="secondary"] {
+    --background: #ffbb33;
+  }
+  
+  ion-item-option[color="danger"] {
+    --background: #ff4d4d;
+  }
+  

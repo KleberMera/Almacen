@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar mode="ios" color="primary">
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding d-flex-center">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size-md="6" size-lg="4">
+        <div class="ion-text-center">
+          <ion-label color="primary">
+            <h1>
+              <strong>Almacen</strong> App
+            </h1>
+          </ion-label>
+          <div class="ion-padding">
+            <img src="assets/imagenes/logo1.jpeg" alt="Logo" />
+          </div>
+        </div>
+
+        <ion-card>
+          <ion-card-content>
+            <ion-item>
+              <ion-label position="floating">Usuario</ion-label>
+              <ion-input type="text" [(ngModel)]="usuario"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Clave</ion-label>
+              <ion-input type="password" [(ngModel)]="clave"></ion-input>
+            </ion-item>
+            <ion-text color="primary" class="ion-margin-top ion-text-right">
+              <a routerLink="/recuperar">Olvidé mi contraseña</a>
+            </ion-text>
+          </ion-card-content>
+        </ion-card>
+
+        <div class="ion-text-center ion-margin-top">
+          <ion-button expand="block" (click)="iniciarSesion()">
+            <ion-icon slot="start" name="log-in"></ion-icon>
+            Entrar
+          </ion-button>
+          <ion-button expand="block" color="secondary" (click)="srvG.irA('/usuario/'+id)">
+            <ion-icon slot="start" name="add"></ion-icon>
+            Registrarse
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
